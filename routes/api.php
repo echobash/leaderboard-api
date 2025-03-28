@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+use App\Http\Controllers\UserController;
+
+Route::get('/users/grouped-by-score', [UserController::class, 'getUsersGroupedByScore']);
+

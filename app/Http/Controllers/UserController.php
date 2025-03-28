@@ -55,4 +55,19 @@ class UserController extends Controller {
         $user->delete();
         return redirect('/');
     }
+
+    public function getUsersGroupedByScore()
+{
+    $users = User::select('name', 'points', 'age')->get();
+
+    $grouped = $users->groupBy('points')->map(function ($group) {
+        return [
+            'names' => $group->pluck('name')->toArray(),
+            'average_age' => round($group->avg('age'))
+        ];
+    });
+
+    return response()->json($grouped);
+}
+
 }

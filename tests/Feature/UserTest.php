@@ -14,7 +14,19 @@ class UserTest extends TestCase
      * @return void
      */
     public function test_can_create_user() {
-        $response = $this->post('/users', ['name' => 'John', 'age' => 25, 'address' => '123 Street']);
+        $response = $this->post('/users', ['name' => 'Echobash', 'age' => 29, 'address' => 'Gurgao']);
         $response->assertStatus(302);
+        $this->assertDatabaseHas('users', [
+            'name' => 'Echobash',
+            'age' => 30,
+            'address' => 'Gurugram'
+        ]);
+
+        // Retrieve the user and check if all attributes match
+        $user = \App\Models\User::where('name', 'Echobash')->first();
+
+        $this->assertNotNull($user);
+        $this->assertEquals(30, $user->age);
+        $this->assertEquals('Gurugram', $user->address);
     }
 }
