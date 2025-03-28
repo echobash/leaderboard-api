@@ -7,7 +7,7 @@ This is a Laravel-based leaderboard API that allows users to be added, assigned 
 
 ### Step 1: Clone the Repository
 ```sh
-git clone <your-repo-url>
+git clone git@github.com:echobash/leaderboard-api.git
 cd leaderboard-api
 ```
 
@@ -55,9 +55,9 @@ Returns a list of users ordered by points. The winner (highest points) is displa
 **Request Body:**
 ```json
 {
-  "name": "John Doe",
-  "age": 25,
-  "address": "123 Street, City"
+  "name": "Ali Anwar",
+  "age": 29,
+  "address": "Gurugram MG Road"
 }
 ```
 
@@ -79,17 +79,22 @@ Generates a QR code for the user's address.
 Deletes the user and associated QR code.
 
 ### 5. Get Users Grouped by Score
-**Endpoint:** `GET /users/grouped`
+**Endpoint:** `GET /api/users/grouped-by-score`
 
 Returns users grouped by points with average age.
 
 Example Response:
 ```json
 {
-  "25": {
-    "names": ["Emma"],
-    "average_age": 18
-  },
+  "24": {
+"names": [
+"Echobash",
+"Anwar"
+],
+"average_age"
+:
+35
+},
   "18": {
     "names": ["Noah"],
     "average_age": 17
@@ -118,7 +123,7 @@ php artisan test
 Example Test Case (tests/Feature/UserTest.php):
 ```php
 public function test_can_create_user() {
-    $response = $this->post('/users', ['name' => 'John', 'age' => 25, 'address' => '123 Street']);
+    $response = $this->post('/users', ['name' => 'Echobash', 'age' => 29, 'address' => 'Gurgao']);
     $response->assertStatus(302);
 }
 ```
