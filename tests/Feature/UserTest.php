@@ -14,7 +14,7 @@ class UserTest extends TestCase
      * @return void
      */
     public function test_can_create_user() {
-        $response = $this->post('/users', ['name' => 'Echobash', 'age' => 29, 'address' => 'Gurgao']);
+        $response = $this->post('/users', ['name' => 'Echobash', 'age' => 30, 'address' => 'Gurugram']);
         $response->assertStatus(302);
         $this->assertDatabaseHas('users', [
             'name' => 'Echobash',
