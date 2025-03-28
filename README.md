@@ -1,7 +1,7 @@
 # Laravel Leaderboard API
-![Leaderboard](public/screenshots/leaderboard1.png)
-![Leaderboard](public/screenshots/leaderboard2.png)
-![Leaderboard](public/screenshots/leaderboard3.png)
+![Leaderboard](https://github.com/echobash/leaderboard-api/blob/main/screenshots/Leaderboard1.png)
+![Leaderboard](https://github.com/echobash/leaderboard-api/blob/main/screenshots/Leaderboard2.png)
+![Leaderboard](https://github.com/echobash/leaderboard-api/blob/main/screenshots/Leaderboard3.png)
 
 ## Project Overview
 This is a Laravel-based leaderboard API that allows users to be added, assigned points, and displayed on a leaderboard. The system includes QR code generation for each user and an automated winner selection process.
