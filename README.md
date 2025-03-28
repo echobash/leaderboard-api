@@ -57,9 +57,7 @@ Example Response:
 "Echobash",
 "Anwar"
 ],
-"average_age"
-:
-35
+"average_age":35
 },
   "18": {
     "names": ["Noah"],
