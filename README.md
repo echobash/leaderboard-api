@@ -44,41 +44,7 @@ Your API will be available at `http://127.0.0.1:8000/`
 
 ## API Endpoints Documentation
 
-### 1. Get Leaderboard
-**Endpoint:** `GET /`
-
-Returns a list of users ordered by points. The winner (highest points) is displayed at the top.
-
-### 2. Add a New User
-**Endpoint:** `POST /users`
-
-**Request Body:**
-```json
-{
-  "name": "Ali Anwar",
-  "age": 29,
-  "address": "Gurugram MG Road"
-}
-```
-
-Generates a QR code for the user's address.
-
-### 3. Update Points
-**Endpoint:** `POST /users/{id}/points`
-
-**Request Body:**
-```json
-{
-  "increment": true  // Set to false to decrement
-}
-```
-
-### 4. Delete a User
-**Endpoint:** `DELETE /users/{id}`
-
-Deletes the user and associated QR code.
-
-### 5. Get Users Grouped by Score
+### 1. Get Users Grouped by Score
 **Endpoint:** `GET /api/users/grouped-by-score`
 
 Returns users grouped by points with average age.
